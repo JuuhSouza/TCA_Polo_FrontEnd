@@ -23,12 +23,12 @@ body{
 /* NAVEGAÇÃO VAN-BAR */
 .menu-bar{
     background-color: var(--cor-fundo-nav-bar);
-    height: 80px;
+    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0 5vw; /* Largura relatica ao viewport ou seja pela tela */
     z-index: 10;
     border-radius: 0 0 10px;
     position: relative;
@@ -47,10 +47,12 @@ body{
 .menu-bar ul{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-bar ul li{
-    padding: 10px 30px;
+    padding: 1em 2vw;
     position: relative;
 }
 
@@ -98,21 +100,21 @@ body{
 /* NAVEGAÇÃO VAN-BAR FINAL */
 
 /* CARROSSEL AUTOMATICO*/
-/* Container do Carrossel */
 .container-carrossel {
     position: relative; /* Importante para posicionar as ondas */
     min-height: 100vh;
     overflow: visible; /* Permite que as ondas apareçam fora do carrossel */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr)); /* auto-fit = deixa o grid se ajustar aut. */
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
-/* Carrossel */
 .carrossel {
     width: 100%;
-    height: 70vh;
-    top: -3em;
+    height: 100vh;
+    top: -5vw;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
@@ -147,18 +149,18 @@ button.esquerda, button.direita {
     z-index: 10;
 }
 
-button.esquerda { left: 10px; }
-button.direita { right: 10px; }
+button.esquerda { left: 10px }
+button.direita { right: 10px }
 
 /* Ondas Parallax */
 .ondas {
     position: absolute; /* Relativo ao container-carrossel */
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 200px;
-    top: 30em;user-select: none;
     pointer-events: none;
-    z-index: 5;
+    z-index: 100;
     overflow: hidden;
 }
 
@@ -168,7 +170,7 @@ button.direita { right: 10px; }
     height: 100%;
     background: url('img/onda.png') repeat-x;
     background-size: contain;
-    opacity: 0.7;
+    opacity: 1;
     animation: moverOndas linear infinite;
 }
 
@@ -218,6 +220,7 @@ button.direita { right: 10px; }
 /* CARD */
 .container-card{
     max-width: 90%;
+    display: grid;
     margin: auto;
     overflow: auto;
     padding: 0 4.5rem;
@@ -238,14 +241,14 @@ img{
 }
 
 .infos-cesmar h3{
-    font-size: 3em;
+    font-size: 2.2vw;
     text-align: left;
     margin: 22px;
     color: var(--cor-titulo-card-claro);
 }   
 
 .infos-cesmar p{
-    font-size: 1.2em;
+    font-size: 1.2vw;
     color: var(--cor-paragrafo-card);
     margin: 22px;
 }   
@@ -255,7 +258,7 @@ img{
 }
 
 .btn a{
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     color: var(--cor-letra-nav-bar);
     background-color: var(--cor-fundo-nav-bar2);
@@ -272,8 +275,8 @@ img{
 }
 
 .card img{
-    height: 400px;
-    width: 550px;
+    height: auto;
+    width: 100%;
 }
 
 .card:nth-child(even) img{
@@ -281,4 +284,10 @@ img{
 }
 
 /* SOBRE O CESMAR FINAL*/
+
+
+
+
+
+
 
