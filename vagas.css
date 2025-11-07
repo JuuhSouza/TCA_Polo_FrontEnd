@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo-nav-bar: #011126 ;
+    --cor-fundo-nav-bar2: #022047 ;
+    --cor-letra-nav-bar: #FEFEFE ;
+    --cor-letra-logo-span: #BBC6D7 ;
+    --cor-titulo-card-claro: #2685BF ;
+    --cor-titulo-card-escuro:#011126 ;
+    --cor-paragrafo-card: #737373 ;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:white;
+}
+
+/* NAVEGAÇÃO VAN-BAR */
+.menu-bar{
+    background-color: var(--cor-fundo-nav-bar);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw; /* Largura relatica ao viewport ou seja pela tela */
+    z-index: 10;
+    border-radius: 0 0 10px;
+    position: relative;
+    position: fixed;
+}
+
+.logo{
+    color: var(--cor-letra-nav-bar);
+    font-size: 30px;
+}
+
+.logo span{
+    color: var(--cor-letra-logo-span);
+}
+
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-bar ul li{
+    padding: 1em 2vw;
+    position: relative;
+}
+
+.menu-bar ul li a{
+    color: var(--cor-letra-nav-bar);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.4s ease;
+}
+
+.menu-bar ul li a:hover{
+    color: white;
+    font-size: 1.4em;
+    padding: 3px;
+}
+
+.dropdown-menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--cor-fundo-nav-bar);
+    border-radius: 10%;
+}
+
+.dropdown-menu ul{
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropdown-menu ul li{
+   width: 150px;
+   padding:10px ;
+}
+
+.fas{
+ /*    float: right; */
+    margin-left: 10px;
+    padding-top: 3px;
+}
+/* NAVEGAÇÃO VAN-BAR FINAL */
+
+.Cursos{
+    padding: 10%;
+}
+
+.titulo-vagas h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 2%;
+    color: var(--cor-fundo-nav-bar2);
+}
+
+.titulo-vagas p{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 2%;
+    color: var(--cor-fundo-nav-bar2);
+}
+
+/* card cursos */
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 12;
+    flex-wrap: wrap;
+}
+
+.container-card .card{
+    top: -5em;
+    position: relative;
+    width: 25%;
+    height: 440px;
+       box-shadow: inset 5px 5px 5px rgba(254, 254, 254, 0.05),
+        inset -5px -5px 5px rgb(255, 255, 255, 0.05),
+        5px 5px 5px rgb(0, 0, 0, 0.05),
+        -5px -5px 5px rgb(0, 0, 0, 0.05);
+        border-radius: 5%;
+        margin: 1%;
+}
+
+.container-card .card .caixa-card{
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    right: 2vw;
+    background-color:#bbc6d7bd;
+    box-shadow:  0 10px 20px rgba(1, 7, 59, 0.342);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container-card .card:hover .caixa-card{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.4);
+    background-color: var(--cor-letra-nav-bar);
+}
+
+.container-card .card .caixa-card .conteudo{
+    padding: 9%;
+    text-align: center;
+}
+
+.container-card .card .caixa-card .conteudo h2{
+    color: var(--cor-fundo-nav-bar2);
+}
+
+.container-card .card .caixa-card .conteudo img{
+    width: 50%;
+    height: 50%;
+    font-size: 1.8em;
+    z-index: 1;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+.container-card .card .caixa-card .conteudo p{
+    font-size: 1.3em;
+    font-weight: 300;
+    padding: 2%;
+    margin: 5% auto;
+    color: var(--cor-fundo-nav-bar);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container-card .card .caixa-card .conteudo h3{
+    font-size: 1.5em;
+    background-color: green;
+    padding: 4%;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.container-card .card .caixa-card .conteudo a{
+    position: relative;
+    display: inline-block;
+    padding: 4% 6%;
+    background-color: var(--cor-fundo-nav-bar);
+    color: var(--cor-letra-nav-bar);
+    text-decoration: none;
+    margin-top: 2em ;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+    border-radius: 10px;
+}
+
+.container-card .card .caixa-card .conteudo a:hover{
+    background-color: var(--cor-letra-nav-bar);
+    color:var(--cor-fundo-nav-bar);
+}
+

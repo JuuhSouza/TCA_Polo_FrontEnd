@@ -8,7 +8,6 @@
     --cor-fundo-nav-bar: #011126 ;
     --cor-fundo-nav-bar2: #022047 ;
     --cor-letra-nav-bar: #FEFEFE ;
-    --cor-letra-nav-bar2: #DDE0E6 ;
     --cor-letra-logo-span: #BBC6D7 ;
     --cor-titulo-card-claro: #2685BF ;
     --cor-titulo-card-escuro:#011126 ;
@@ -202,8 +201,7 @@ button.direita { right: 10px }
 .titulo h1{
     font-size: 4em;
     text-align: center;
-    margin-top: -2em;
-    color: var(--cor-titulo-card-escuro);
+    color: var(--cor-fundo-nav-bar2);
 }
 
 .infoCesmar p{
@@ -211,10 +209,11 @@ button.direita { right: 10px }
     margin: 1em;
 }
 
-.titulo-autacao{
+.titulo-atuacao{
     font-size: 1.5em;
     text-align: center ;
     padding: 2em;
+    color: var(--cor-fundo-nav-bar2);
 }
 
 /* CARD */
@@ -285,9 +284,117 @@ img{
 
 /* SOBRE O CESMAR FINAL*/
 
+/* CALENDARIO */
+.calendario .info-calendario{
+    display: flex;
+    padding: 2%;
+}
+
+.titulo-calendario{
+    padding: 5%;
+    margin: 4%;
+}
+
+.titulo-calendario h1{
+    font-size: 3em;
+    color: var(--cor-titulo-card-escuro);
+}
+
+.info-calendario img{
+    width: 60%;
+    height: 30%;
+}
+
+.info-calendario ul li{
+    font-size: 1em;
+    margin: 2em;
+    list-style-type: disc;
+}
 
 
+/* FOOTER */
+footer {
+    background-color: #022047;
+    width: 100%;
+    color: white;
+}
 
+.footer_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3% 3.5%;
+}
 
+.footer_contacts h1 {
+    font-size: x-large;
+    padding: 1% 10%;
+    cursor: pointer;
+}
+.footer_contacts h1:hover {
+    opacity: 0.5;
+}
 
+img {
+    width: 45%;
+    height: 65%;
+}
 
+h1 {
+    padding: 2%;
+    font-size: large;
+    color: white;
+    transition: 0.4s;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+}
+
+.endereco h3 {
+    padding: 2% 2.5%;
+}
+
+.contato h3 {
+    padding: 2% 2.5%;
+}
+
+.email h3 {
+    padding: 2% 2.5%;
+}
+
+.footer_social_media {
+    display: flex;
+    flex-direction: column;
+    gap: 18%;
+    margin-top: 1.5%;
+    padding: 2% 2.5%;
+}
+
+.footer_social_media .footer_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 0.4s;
+}
+
+.footer_link {
+    text-decoration: none;
+}
+
+.footer_social_media .footer_link:hover {
+    opacity: 0.5;
+}
+
+.footer_link i {
+    color: white;
+    font-size: 24px;
+}
+
+.footer_copyright {
+    font-size: small;
+    color: white;
+}
