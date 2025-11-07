@@ -342,8 +342,9 @@ img {
 h1 {
     padding: 2%;
     font-size: large;
-    color: white;
+    color: var(--cor-letra-logo-span);
     transition: 0.4s;
+    font-size: 1.2em;
 }
 
 .navigation {
@@ -355,6 +356,7 @@ h1 {
 
 .endereco h3 {
     padding: 2% 2.5%;
+    font-size: 1em;
 }
 
 .contato h3 {
