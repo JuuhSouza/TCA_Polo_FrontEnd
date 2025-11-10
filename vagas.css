@@ -118,19 +118,145 @@ body{
 
 /* card cursos */
 
-.container-card{
+/* busca */
+.layout-vagas{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 12;
-    flex-wrap: wrap;
+    height: calc(100vh - 80px);
+}
+
+.lista-vagas{
+    width: 35%;
+   /*  background-color: var(--cor-letra-logo-span); */
+    border-right: 1px solid var(--cor-fundo-nav-bar);
+    box-shadow: inset 5px 5px 5px rgba(254, 254, 254, 0.05),
+        inset -5px -5px 5px rgba(235, 235, 235, 0.171),
+        5px 5px 5px #BBC6D7,
+        -5px -5px 5px rgb(0, 0, 0, 0.05);
+        border-radius: 5%;
+        margin: 3%;
+    padding: 2%;
+    overflow-y: auto;
+}
+
+/* .lista-vagas:hover{
+    background-color: var(--cor-letra-nav-bar);
+    border-radius: 6%;
+    transform: translateY(-20px);
+    transition: 1s ease ;
+} */
+
+.lista-vagas h2{
+    margin-bottom: 15px;
+    color: var(--cor-fundo-nav-bar);
+    font-size: 2em;
+}
+
+.vaga-item{
+    display: block;
+    background-color: var(--cor-letra-logo-span);
+    border-radius: 20px;
+    padding: 5%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--cor-fundo-nav-bar2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
+    transition: 0.3s ease;
+}
+
+.vaga-item:hover{
+    background-color: var(--cor-letra-nav-bar);
+}
+
+.vaga-item span{
+    background-color: var(--cor-paragrafo-card);
+    color: var(--cor-letra-nav-bar);
+    padding: 3px 14px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+/* detalhes da vaga */
+.detalhes-vaga{
+    flex: 1;
+    padding: 5%;
+    overflow: auto;
+    position: relative;
+}
+
+.detalhe-card{
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.detalhe-card h2{
+    font-size: 2em;
+    color: var(--cor-fundo-nav-bar2);
+}
+
+.detalhe-card h3{
+    font-size: 1.5em;
+    color: var(--cor-fundo-nav-bar2);
+}
+
+.detalhe-card p{
+    font-size: 1.02em;
+    margin: 3%;
+    margin-left: -0.5em;
+    color: var(--cor-fundo-nav-bar);
+}
+
+.detalhe-card p span{
+    font-size: 1.02em;
+    color: var(--cor-titulo-card-claro);
+}
+
+.detalhe-card ul{
+    font-size: 1.2em;
+}
+
+/* mostar apenas o card selcionado */
+.detalhe-card:target{
+    display: block;
+}
+
+.btn-candidatar{
+    background-color: var(--cor-fundo-nav-bar2);
+    color: var(--cor-letra-nav-bar);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin:2em;
+    transition: all 0.3s ease;
+}
+
+.btn-candidatar:hover{
+    background-color: var(--cor-letra-logo-span);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* .container-card{
+    padding: 1em 1em;
 }
 
 .container-card .card{
     top: -5em;
     position: relative;
-    width: 25%;
-    height: 440px;
+    width: 70%;
+    height: 800px;
        box-shadow: inset 5px 5px 5px rgba(254, 254, 254, 0.05),
         inset -5px -5px 5px rgb(255, 255, 255, 0.05),
         5px 5px 5px rgb(0, 0, 0, 0.05),
@@ -147,14 +273,13 @@ body{
     background-color:#bbc6d7bd;
     box-shadow:  0 10px 20px rgba(1, 7, 59, 0.342);
     border-radius: 15px;
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
 }
 
 .container-card .card:hover .caixa-card{
-    transform: translateY(-50px);
+    transform: translateY(-20px);
     box-shadow: 0 10px 40px rgb(0, 0, 0, 0.4);
     background-color: var(--cor-letra-nav-bar);
 }
@@ -164,38 +289,52 @@ body{
     text-align: center;
 }
 
-.container-card .card .caixa-card .conteudo h2{
+.container-card .card .caixa-card .conteudo h1{
     color: var(--cor-fundo-nav-bar2);
-}
+    font-size: 2.5em;
+    text-align: left;
+} */
 
-.container-card .card .caixa-card .conteudo img{
-    width: 50%;
-    height: 50%;
-    font-size: 1.8em;
+/* .container-card .card .caixa-card .conteudo img{
+    width: 20%;
+    height: 20%;
     z-index: 1;
     transition: 0.5s;
     border-radius: 20%;
-}
+} */
 
-.container-card .card .caixa-card .conteudo p{
+/* .container-card .card .caixa-card .conteudo p{
     font-size: 1.3em;
     font-weight: 300;
-    padding: 2%;
-    margin: 5% auto;
     color: var(--cor-fundo-nav-bar);
     z-index: 1;
     transition: 0.5s;
 }
 
-.container-card .card .caixa-card .conteudo h3{
-    font-size: 1.5em;
-    background-color: green;
-    padding: 4%;
-    border-radius: 20px;
-    color: rgb(255, 255, 255);
+.container-card .card .caixa-card .conteudo h2{
+    font-size: 2em;
+    text-align: left;
+    margin: 1em;
+    color: var(--cor-fundo-nav-bar2);
 }
 
-.container-card .card .caixa-card .conteudo a{
+.container-card .card .caixa-card .conteudo h3{
+    font-size: 1.5em;
+    text-align: left;
+    margin: 1.4em;
+    color: var(--cor-fundo-nav-bar2);
+}
+
+.container-card .card .caixa-card .conteudo ul{
+    font-size: 1em;
+    padding: -2em;
+    margin: 2.1em;
+    text-align: left;
+    margin-top: -1em;
+    color: var(--cor-titulo-card-escuro);
+}
+ */
+/* .container-card .card .caixa-card .conteudo a{
     position: relative;
     display: inline-block;
     padding: 4% 6%;
@@ -206,10 +345,93 @@ body{
     box-shadow: 0 10px 20px rgb(0, 0, 0, 0.02);
     transition: all 0.4s ease;
     border-radius: 10px;
-}
+} */
 
-.container-card .card .caixa-card .conteudo a:hover{
+/* .container-card .card .caixa-card .conteudo a:hover{
     background-color: var(--cor-letra-nav-bar);
     color:var(--cor-fundo-nav-bar);
+} */
+
+/* FOOTER */
+footer {
+    background-color: #022047;
+    width: 100%;
+    color: white;
 }
 
+.footer_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3% 3.5%;
+}
+
+.footer_sobre_nos h1 {
+    font-size: x-large;
+    margin-top: -2em;
+    padding: 1% 10%;
+    margin-left: 7%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.footer_sobre_nos h1:hover {
+    opacity: 0.5;
+}
+
+.footer_content img {
+    width: 55%;
+    height: 75%;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+}
+
+.navegacao h1 {
+    padding: 2%;
+    font-size: 1.3em;
+    color: var(--cor-letra-logo-span);
+    transition: 0.4s;
+}
+
+.navegacao h3 {
+    padding: 2% 2.5%;
+    font-size: 1em;
+}
+
+.footer_redes_sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 18%;
+    margin-top: 1.5%;
+    padding: 2% 2.5%;
+}
+
+.footer_redes_sociais .footer_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 0.4s;
+}
+
+.footer_link {
+    text-decoration: none;
+}
+
+.footer_redes_sociais .footer_link:hover {
+    opacity: 0.5;
+}
+
+.footer_link i {
+    color: white;
+    font-size: 24px;
+}
+
+.footer_copyright {
+    font-size: small;
+    color: white;
+    margin-left: 2em;
+}

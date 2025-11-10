@@ -325,49 +325,42 @@ footer {
     padding: 3% 3.5%;
 }
 
-.footer_contacts h1 {
+.footer_sobre_nos h1 {
     font-size: x-large;
+    margin-top: -2em;
     padding: 1% 10%;
+    margin-left: 7%;
     cursor: pointer;
 }
-.footer_contacts h1:hover {
+.footer_sobre_nos h1:hover {
     opacity: 0.5;
 }
 
-img {
-    width: 45%;
-    height: 65%;
+.footer_content img {
+    width: 55%;
+    height: 75%;
 }
 
-h1 {
-    padding: 2%;
-    font-size: large;
-    color: var(--cor-letra-logo-span);
-    transition: 0.4s;
-    font-size: 1.2em;
-}
-
-.navigation {
+.navegacao {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: medium;
 }
 
-.endereco h3 {
+.navegacao h1 {
+    padding: 2%;
+    font-size: 1.3em;
+    color: var(--cor-letra-logo-span);
+    transition: 0.4s;
+}
+
+.navegacao h3 {
     padding: 2% 2.5%;
     font-size: 1em;
 }
 
-.contato h3 {
-    padding: 2% 2.5%;
-}
-
-.email h3 {
-    padding: 2% 2.5%;
-}
-
-.footer_social_media {
+.footer_redes_sociais {
     display: flex;
     flex-direction: column;
     gap: 18%;
@@ -375,7 +368,7 @@ h1 {
     padding: 2% 2.5%;
 }
 
-.footer_social_media .footer_link {
+.footer_redes_sociais .footer_link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,7 +380,7 @@ h1 {
     text-decoration: none;
 }
 
-.footer_social_media .footer_link:hover {
+.footer_redes_sociais .footer_link:hover {
     opacity: 0.5;
 }
 
@@ -399,4 +392,5 @@ h1 {
 .footer_copyright {
     font-size: small;
     color: white;
+    margin-left: 2em;
 }
