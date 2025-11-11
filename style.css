@@ -325,14 +325,17 @@ footer {
     padding: 3% 3.5%;
 }
 
-.footer_sobre_nos h1 {
+.footer_sobre_nos a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: x-large;
+    color: var(--cor-letra-logo-span);
     margin-top: -2em;
     padding: 1% 10%;
-    margin-left: 7%;
+    margin-left: -49%;
     cursor: pointer;
+    text-decoration: none;
 }
-.footer_sobre_nos h1:hover {
+.footer_sobre_nos a:hover {
     opacity: 0.5;
 }
 
