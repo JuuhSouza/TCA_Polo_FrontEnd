@@ -45,3 +45,12 @@ window.addEventListener('scroll', function(){
     carrossel.style.transform =  `translateY(${scrollPos * velocidade}px)`;
 })
 /* EFEITO PARALLAX SCROLL FINAL*/
+
+/* PAGINA DE VAGAS */
+
+function mostrarVaga(id) {
+  document.querySelectorAll('.detalhe-card').forEach(card => {
+    card.style.display = 'none';
+  });
+  document.getElementById(id).style.display = 'block';
+}
