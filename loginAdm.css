@@ -62,7 +62,7 @@ body{
     text-decoration: none;
     font-size: 1.2em;
     display: inline-block;
-    transition: all 0.4s ease;
+    transition: transform .6s ease;
 }
 
 .menu-bar ul li a:hover{
@@ -83,21 +83,11 @@ body{
     display: none;
 }
 
-/* login */
-.login-admin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2em;
+.menu-bar ul li a.ativa{
+    pointer-events: none;
+    cursor: default;
+    color: var(--cor-titulo-card-claro);
 }
-
-.login-admin img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 /* login final */
 
 .menu-bar ul li:hover .dropdown-menu ul{
@@ -117,104 +107,94 @@ body{
 }
 /* NAVEGAÇÃO VAN-BAR FINAL */
 
+/* login */
 
-/*BODY*/
-
-.texto_sobre {
-    padding: 7% 3.5%;
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-}
-
-.texto_sobre h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 5.8%;
-    font-size: xx-large;
-}
-
-.texto_sobre p {
-    font-size: large;
-    padding: 10%;
-}
-
-.texto_sobre img {
-    margin-top: 1.5%;
-    width: 60%;
-}
-
-
-/*BODY FINAL*/
-
-
-
-/* FOOTER */
-footer {
-    background-color: #022047;
-    width: 100%;
-    color: white;
-}
-
-.footer_content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 3% 3.5%;
-}
-
-.footer_content img {
-    width: 65%;
-    height: 90%;
-}
-
-.navegacao {
+section{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    font-size: medium;
-}
-
-.navegacao h1 {
-    padding: 2%;
-    font-size: 1.3em;
-    color: var(--cor-letra-logo-span);
-    transition: 0.4s;
-}
-
-.navegacao h3 {
-    padding: 2% 2.5%;
-    font-size: 1em;
-}
-
-.footer_redes_sociais {
-    display: flex;
-    flex-direction: column;
-    gap: 18%;
-    margin-top: 1.5%;
-    padding: 2% 2.5%;
-}
-
-.footer_redes_sociais .footer_link {
-    display: flex;
     align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.formulario-caixa{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+    border: 2px solid var(--cor-letra-logo-span);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
     justify-content: center;
-    border-radius: 100%;
-    transition: all 0.4s;
+    align-items: center;
 }
 
-.footer_link {
-    text-decoration: none;
+h2{
+    font-size: 2em;
+    color: var(--cor-fundo-nav-bar);
+    text-align: center;
 }
 
-.footer_redes_sociais .footer_link:hover {
-    opacity: 0.5;
+.input-caixa{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid var(--cor-titulo-card-claro);
 }
 
-.footer_link i {
-    color: white;
-    font-size: 24px;
+.input-caixa label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--cor-fundo-nav-bar2);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.input-caixa input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: var(--cor-fundo-nav-bar2);
 }
 
-.footer_copyright {
-    font-size: small;
-    color: var(--cor-letra-logo-span);
-    margin-left: 3.5em;
+.input-caixa i{
+    position: absolute;
+    right: 8px;
+    color: var(--cor-titulo-card-claro);
+    font-size: 1.2rem;
+    top: 20px;
 }
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--cor-titulo-card-claro);
+    color: var(--cor-letra-nav-bar);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all .4s ease;
+}
+
+button:hover{
+    background-color: var(--cor-letra-logo-span);
+    color: var(--cor-fundo-nav-bar2);
+}
+
+
+/* ANIMAÇÃO FUNDO */
+

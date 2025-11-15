@@ -17,22 +17,36 @@
 <body>
 
     <!-- Barra de navegação -->
-        <div class="menu-bar">
-            <h1 class="logo"> Portal do <span> Polo</span></h1>
+        <div class="menu-bar" id="inicio">
+            <h1 class="logo"><a href="index.html"> Portal do <span> Polo</span></a></h1>
         <ul>
-            <li><a href="#"> Notícias </a></li>
-            <li><a href="#calendario-enventos"> Eventos </a></li>
+            <li><a href="#inicio"> Início </a></li>
+            <li><a href="sobre.html"> Sobre </a></li>
+<!--             <li><a href="#"> Notícias </a></li>
+ -->            <li><a href="#calendario-enventos"> Eventos </a></li>
             <li><a href="vagas.html"> Vagas </a></li>
-            <li><a href="#"> Projetos <i class="fas fa-caret-down"></i></a>
+            <li><a href="#"> Colaboradores <i class="fas fa-caret-down"></i></a>
              <div class="dropdown-menu">
                 <ul>
-                    <li> <a href="#"> Time 1</a></li>
+                    <li> <a href="#">Time 1</a></li>
                     <li> <a href="#"> Time 2</a></li>
                     <li> <a href="#"> Time 3</a></li>
                     <li> <a href="#"> Time 4</a></li>
                     <li> <a href="#"> Time 5</a></li>
                 </ul>
             </div>
+            </li>
+            <!-- LOGIN  -->
+            <li>
+                <a href="#">Login <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="login-admin">
+                            <img src="img/icone-branco-removebg-preview.png" alt="Login ADM">
+                            <p> <a href="loginAdm.html">Login de ADM</a></p>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         </div>
@@ -60,9 +74,8 @@
         <div class="titulo" >
             <h1> Sobre o CESMAR</h1>
         </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam at sit tenetur commodi quam error molestiae omnis vel pariatur quaerat, placeat maxime unde qui quis consequuntur, accusantium nesciunt doloremque!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iste dignissimos voluptatibus itaque maiores ducimus, vitae corporis obcaecati ea sequi dolores ratione aliquam, inventore autem quas. Ut ullam eligendi magni!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam vitae fugit at ea tempore libero nisi, eligendi ratione laborum voluptatibus nostrum suscipit corrupti dolore provident nobis, ipsam nesciunt itaque!
+            <p>O Centro Social Marista de Porto Alegre (CESMAR) é uma instituição de caráter social vinculada à Rede Marista, sediada no bairro Mário Quintana, na capital gaúcha. Inaugurado em 1998, o CESMAR ocupa uma vasta área — mais de 78 mil m² — e representa um importante polo de transformação social na comunidade. <br>
+            Foi criado sob a inspiração do carisma de São Marcelino Champagnat, fundador do Instituto Marista, e está comprometido com a formação integral de crianças, adolescentes e jovens, promovendo uma sociedade mais livre, justa, fraterna e participativa. <br>
             </p>
         </div>
      </section>
@@ -78,7 +91,9 @@
 
             <div class="infos-cesmar" data-aos="fade-left">
                 <h3>Sócio educativo</h3>
-                <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore amet exercitationem tenetur ab laudantium. Culpa maiores harum atque. Excepturi veniam ea eum sed exercitationem recusandae accusantium, aperiam cupiditate placeat similique.</p>
+                <p>A atuação Social da Rede Marista oportuniza novas perspectivas de futuro a crianças, adolescentes, jovens e adultos em situação de vulnerabilidade. A transformação social é proporcionada a partir de uma atuação que reúne serviços focados no desenvolvimento integral dos educandos e estudantes, suas famílias e comunidades nas quais estão inseridos.
+
+                Distribuídos na Grande Porto Alegre, no interior do Rio Grande do Sul, e na Região Amazônica, os Centros Sociais e as demais frentes de atuação do Social Marista têm o objetivo de promover a inclusão e minimizar o impacto das desigualdades sociais, educacionais e econô​micas.</p>
             </div>
         </div>
 
@@ -87,12 +102,14 @@
 
             <div class="infos-cesmar" data-aos="fade-left">
                 <h3>Polo</h3>
-                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae at vel sapiente? Ratione veniam nemo ad doloribus cupiditate, perferendis totam commodi asperiores, ducimus laudantium sunt. Harum quisquam similique quibusdam nobis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus quae quos enim quaerat tempora eligendi earum maiores at sunt. Rerum vitae optio iste recusandae, perspiciatis consequuntur officia voluptatem quod!
-                    lore
+                <p>  O Polo Marista de Formação Tecnológica, localizado dentro do complexo do Centro Social Marista (CESMAR) no bairro Mário Quintana, é um espaço dedicado ao desenvolvimento humano, inclusão social e capacitação técnica por meio de tecnologia. <br>
+                    <span>Missão e Propósito </span> <br>
+                    Promover crescimento econômico e justiça social por meio da tecnologia, especialmente em uma região desfavorecida da cidade. <br>
+                    Fomentar o desenvolvimento sustentável, unindo formação técnica a valores humanos, comunitários e de responsabilidade ambiental. <br>
+                    Capacitar jovens e adultos para o mundo do trabalho, através de cursos, projetos e oficinas que inserem a comunidade no universo da tecnologia.
                 </p>
                 <div class="btn">
-                    <a href="#"> saiba mais</a>
+                    <a href="sobre.html"> saiba mais</a>
                 </div>
                 
             </div>
@@ -103,8 +120,8 @@
 
             <div class="infos-cesmar" data-aos="fade-left">
                 <h3>Escola</h3>
-                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium odio minima repellendus fugit pariatur consectetur, aspernatur sapiente, cupiditate quia dolorem incidunt velit nam expedita, aliquid eum. Sint, magnam omnis!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque accusantium aperiam ipsum vero nisi debitis in, molestias culpa modi velit quos aut, quaerat eaque provident quam! Neque inventore molestiae animi.
+                <p >A Rede Marista acredita na educação desenvolvida pela combinação de diálogo e confiança, segurança e afeto, pela soma de valores e conhecimentos técnicos e acadêmicos.
+                Desenvolvida tanto na Educação Básica​, nos Colégios Maristas e Escolas Sociais, quanto no Ensino Superior, na PUCRS​, a proposta educacional marista alia a formação humano-cristã à práticas pedagógicas de qualidade e inovadoras para atender às exigências da atualidade.
                 </p>
             </div>
         </div>
@@ -133,7 +150,6 @@
         <div class="footer_content">
             <div class="footer_sobre_nos">
                 <img src="img/img-footer.png" alt="FOGAP-Logos-Entidades-Formadoras-CESMAR">
-                <a href="sobre.html">Sobre nós</a>
                 </div>
 
             <div class="navegacao">

@@ -11,18 +11,19 @@
     <title>Sobre nós</title>
 </head>
 <body>
-    <!-- Barra de navegação -->
-        <div class="menu-bar">
-            <h1 class="logo"> Portal do <span> Polo</span></h1>
+   <!-- Barra de navegação -->
+        <div class="menu-bar" id="inicio">
+            <h1 class="logo"><a href="index.html"> Portal do <span> Polo</span></a></h1>
         <ul>
-            <li><a href="index.html">Inicio  </a></li>
-            <li><a href="#"> Notícias </a></li>
-            <li><a href="#calendario-enventos"> Eventos </a></li>
+            <li><a href="#inicio"> Início </a></li>
+            <li><a href="sobre.html"> Sobre </a></li>
+<!--             <li><a href="#"> Notícias </a></li>
+ -->            <li><a href="index.html#calendario-enventos"> Eventos </a></li>
             <li><a href="vagas.html"> Vagas </a></li>
-            <li><a href="#"> Projetos <i class="fas fa-caret-down"></i></a>
+            <li><a href="#"> Colaboradores <i class="fas fa-caret-down"></i></a>
              <div class="dropdown-menu">
                 <ul>
-                    <li> <a href="#"> Time 1</a></li>
+                    <li> <a href="#">Time 1</a></li>
                     <li> <a href="#"> Time 2</a></li>
                     <li> <a href="#"> Time 3</a></li>
                     <li> <a href="#"> Time 4</a></li>
@@ -30,8 +31,21 @@
                 </ul>
             </div>
             </li>
+            <!-- LOGIN  -->
+            <li>
+                <a href="#">Login <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="login-admin">
+                            <img src="img/icone-branco-removebg-preview.png" alt="Login ADM">
+                            <p> <a href="loginAdm.html">Login de ADM</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
         </div>
+
     <div class="texto_sobre">
         <h1>Sobre nós</h1>
         <p>
@@ -57,7 +71,6 @@
         <div class="footer_content">
             <div class="footer_sobre_nos">
                 <img src="img/img-footer.png" alt="FOGAP-Logos-Entidades-Formadoras-CESMAR">
-                <a href="sobre.html">Sobre nós</a> 
             </div>
 
             <div class="navegacao">
